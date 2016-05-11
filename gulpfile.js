@@ -28,7 +28,10 @@ var gulp = require('gulp'),
     prettify = require('gulp-html-prettify'),
 
     spritesmith = require('gulp.spritesmith'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+
+    connect = require('gulp-connect'),
+    opn = require('opn');
 
 // ############ SETTINGS ############
 var path = {
@@ -55,6 +58,24 @@ var path = {
         fonts: 'src/fonts/**/*.*'
     }
 };
+// ####################### server
+var server = {
+    host: 'localhost',
+    port: '9000'
+};
+
+gulp.task('webserver', function() {
+    connect.server({
+        host: server.host,
+        port: server.port,
+        livereload: true
+    });
+    opn( 'http://' + server.host + ':' + server.port + '/'+ path.public.html );
+});
+
+gulp.task('openbrowser', function() {
+    opn( 'http://' + server.host + ':' + server.port + '/'+ path.public.html );
+});
 
 // ############склеиваем и расстановка отступов ############
 gulp.task('html', function() {
@@ -66,8 +87,8 @@ gulp.task('html', function() {
 
     .pipe(prettify({indent_char: ' ', indent_size: 2}))
     .pipe(gulp.dest(path.public.html))
-    .pipe(notify("Done fileinclude!"));
-
+    .pipe(notify("Done fileinclude!"))
+    .pipe(connect.reload());
 });
 
 // ############ склейка из разных js и minific ############
@@ -80,7 +101,9 @@ gulp.task('script', function () {
         }))
         //.pipe(uglify()) //Сожмем наш js
         .pipe(gulp.dest(path.public.js)) //Выплюнем готовый файл в public
-        .pipe(notify("Done uglify!"));
+        .pipe(notify("Done uglify!"))
+        .pipe(connect.reload());
+
 });
 
 // ############ склейка из разных css и minific ############
@@ -93,7 +116,8 @@ gulp.task('style', function () {
           }))//Скомпилируем
         .pipe(csso()) //сжимаем
         .pipe(gulp.dest(path.public.css)) //И в public
-        .pipe(notify("Done cssmin!"));
+        .pipe(notify("Done cssmin!"))
+        .pipe(connect.reload());
 
 });
 // ############ fonts ############
@@ -145,7 +169,7 @@ gulp.task('clean', function (cb) {
 gulp.task('build', ['html','script','style','fonts','sprite']);
 
 // ############   команда gulp запускает сборку и сервер ############
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', ['build', 'webserver', 'watch','openbrowser']);
 
 // ############  следит за изменениями в файлах   ############
 gulp.task('watch', function(){

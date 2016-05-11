@@ -12,6 +12,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cli": "^1.2.1",
+    "gulp-connect": "^4.0.0",
     "gulp-csso": "^2.0.0",
     "gulp-file-include": "^0.13.7",
     "gulp-html-prettify": "0.0.1",
@@ -25,6 +26,7 @@
     "gulp-watch": "^4.3.5",
     "gulp.spritesmith": "^6.2.1",
     "i": "^0.3.4",
-    "nib": "^1.1.0"
+    "nib": "^1.1.0",
+    "opn": "^4.0.1"
   }
 }
