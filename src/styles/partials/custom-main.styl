@@ -1,0 +1,499 @@
+/* font-family: "AaarghRegular"; *//*
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("../fonts/Roboto-Regular.eot");
+    src: url("../fonts/Roboto-Regular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Roboto-Regular.woff") format("woff"),
+    url("../fonts/Roboto-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../fonts/Roboto-Bold.eot");
+    src: url("../fonts/Roboto-Bold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Roboto-Bold.woff") format("woff"),
+    url("../fonts/Roboto-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}*/
+/*const*/
+$btn-color-banner ?= #0a9191
+$btn-height-banner ?= 37px
+$text-color-banner ?= #00b8b8
+
+.block-white
+	background #fff
+	border 1px solid #eaeded
+
+.block
+	display block
+.rel
+	position relative
+.abs
+	position absolute
+
+i
+	display inline-block
+	vertical-align middle
+
+.font-bold
+	font-weight 700
+	font-family "Roboto", Arial
+.ellipsis
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+.border-grey-radius
+	border 1px solid $btn-default-border
+	border-radius 2px
+
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.left
+	float left
+
+.content
+	margin: 0 auto
+	max-width: 980px
+	min-width: 240px
+a
+	text-decoration none
+	&:hover
+		text-decoration none
+
+.center
+	text-align center
+
+.container-redisain
+	width 980px
+
+.end
+	margin-bottom 0 !important
+	padding-bottom 0 !important
+
+.row-bg-top
+	margin-top 45px
+//#########################################
+.icon-pics
+	width 100%
+.btn-baner
+	display inline-block
+	height $btn-height-banner
+	margin-left 10px
+	padding 0 20px
+	background $btn-color-banner
+	font 400 16px/$btn-height-banner  "Roboto", Arial
+	color $btn-default-bg !important
+	box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.3);
+
+	&:first-of-type
+		margin-left 0
+
+/*header*/
+.navbar-nav li
+	font-family "Roboto-Regular", Arial
+
+.submenu-link
+	padding 17px 20px 15px 0 !important
+
+.submenu-link-text
+	padding: 3px 0
+	border: 1px solid $brand-primary
+	border-radius: 6px
+	color: $brand-primary
+	font 400 $font-size-base/$font-size-base "Roboto", Arial
+
+	&_redisain
+		border none
+
+
+
+.f-navigation__regions__title {
+    height: 55px;
+    line-height: 55px;
+    white-space: nowrap;
+}
+@media (min-width: 980px) {
+	.f-navigation__regions__title {
+        width: 22%;
+    }
+}
+
+@media (min-width: 1010px) {
+	.f-navigation__regions__title {
+        width: 25%;
+    }
+}
+
+a.ajax {text-decoration: none;border-bottom: 1px dashed #08c;}
+
+/*banner*/
+.banner
+	padding 45px 0 40px
+
+	&__text
+		color  #fff
+
+	&__h1
+		font-weight fold
+		line-height 36px
+		color $text-color-banner
+
+	&__h3
+		line-height 36px
+		color $text-color-banner
+
+	&__h4
+		line-height 23px
+
+.button
+	margin 25px 0 60px
+/*search*/
+.category
+	padding 20px 15px
+	background #fff
+	border 1px solid #eaeded
+	border-radius 2px
+
+	& .left
+		margin-left 10px
+		&:first-of-type
+			margin-left 0
+
+.block-input
+	width 663px
+
+.input-search
+	padding 0 12px
+	width 100%
+	height 30px
+	box-shadow inset 0 0 3px rgba(0,0,0,.3)
+
+.btn-category
+	position relative
+	display inline-block
+	height 30px
+	padding: 0px 25px 0 16px;
+	text-align left
+	font 400 $font-size-base/30px "Roboto", Arial
+	cursor: pointer;
+	color #000
+	background: linear-gradient(to bottom,#fefefe,#e7e7e7)
+
+
+	&_submit
+		padding 0 12px
+		color $btn-default-bg
+		background: linear-gradient(to bottom,#60aba9,#529191)
+		border none
+		border-radius 2px
+
+	&_banner
+		padding 0
+		margin-left 25px
+		width 178px
+		color $gray-base
+		background: linear-gradient(to bottom,#f1ca31,#ecb129)
+		text-align center
+		border none
+		border-radius 2px
+
+		&:hover
+			color #000
+
+.btn-category__down
+	position absolute
+	top 50%
+	margin-top -5px
+	right 16px
+
+/*catlist*/
+.catlist-plus
+	padding 5px 0 10px 15px
+	
+	& .row
+		padding-left 15px
+		margin-right 0
+	
+	& .grid
+		transition height .8s ease-in-out
+	&.active
+		padding 20px 0 40px 15px
+
+		& .row
+			padding-left 0
+
+
+.catlist-header
+	position relative
+
+	&:before
+		content ''
+		position absolute
+		top 45%
+		left 0
+		display block
+		width calc(40% - 15px)
+		height 1px
+		background #eaeded
+
+	&:after
+		content ''
+		position absolute
+		top 45%
+		right 15px
+		display block
+		width calc(40% - 15px)
+		height 1px
+		background #eaeded
+
+
+.catlist
+	background #fff
+	border 1px solid #eaeded
+	border-top-color #fff
+
+.catlist__href
+	padding-right 2px
+	font 400 16px/48px "Roboto", Arial
+	letter-spacing .5px
+	color #529191
+	text-decoration underline
+
+.grid-center
+	& .grid:first-of-type .catlist-plus-elem:first-of-type
+		margin-left 20px
+	& .col-md-6:first-of-type .catlist-plus-elem:first-of-type	
+		margin-left 0
+.grid-center
+	& .col-md-6:last-of-type .catlist-plus-elem:last-of-type
+		margin-top -33px
+
+.catlist-plus-elem ~ .catlist-plus-elem
+	margin-top 15px
+
+	&.nomarg
+		margin-top 0
+
+.catlist-text-description
+	max-height 40px
+	overflow hidden
+	margin-top -10px
+
+.catlist-description__href
+	padding-right 10px
+	font 400 14px/20px "Roboto", Arial
+	color #3a3a3a
+	text-decoration underline
+
+
+.catlist-text
+	display inline-block
+	margin-right 20px
+
+	& sup
+		font-size 13px
+		line-height 13px
+		color #787878
+
+.catlist-button
+	display inline-block
+	margin-top -1px
+	padding 0 21px
+	height 32px
+	cursor pointer
+	background #fff
+	border 1px solid #eaeded
+	border-top-color #fff
+	cursor pointer
+
+	&__text
+		margin 0
+
+		&.active
+			.fa-angle-down
+				transform rotate(180deg)
+
+
+	&__href
+		font 400 14px "Roboto", Arial
+		letter-spacing .5px
+		color #787878
+		border-bottom 1px dotted #787878
+
+.circle
+	position relative
+	display inline-block
+	margin-left 10px
+	width 20px
+	height 20px
+	vertical-align: middle;
+	border-radius 50%
+	background #eaeded
+
+	& .fa-angle-down
+		transition all ease-in 0.3s
+/*banner objava*/
+.circle-bunner
+	top 5px
+	display inline-block
+	width 20px
+	height 20px
+	vertical-align: middle;
+	border-radius 50%
+	background: linear-gradient(to bottom,#f1ca31,#ecb129)
+
+.icon-bunner-big
+	padding-top 65px
+
+.icon-close-banner
+	top 20px
+	right 20px
+	z-index 2
+
+.icon-tour
+	top 80px
+	left 50%
+	margin-left -330px
+
+.icon-bunner-small
+	margin-top 40px
+	padding-top 15px
+
+.banner-ad
+	margin-top 40px
+
+	&__text
+		font 700 16px/normal 'Roboto',Arial
+		color #fff
+.icon-arrow-right
+	margin-left 5px
+	margin-top -4px
+
+.thumbnails-img
+	top -4px
+	left -3px
+	padding: 3px;
+	max-width: 180px;
+	max-height: 160px;
+	background: none repeat scroll 0 0 #fff;
+	border: 1px solid #ebad29;
+	border-radius 2px
+	display: block;
+	box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.2);
+
+
+/*thumbnails*/
+.thumbnails
+	margin: 0 auto;
+	width: 100%;
+	padding-bottom 33px
+
+.thumbnails-block
+	padding-top 45px
+	padding-left 27px
+	border-right 1px dashed #ddd
+
+	&:nth-of-type(4n)
+		border-right none
+	&:nth-of-type(4n) ~ .thumbnails-block
+		border-top 1px dashed #ddd
+
+	&_border
+		display inline-block
+		background: none repeat scroll 0 0 #fff;
+		border: 1px solid #ebad29;
+		border-radius 2px
+		box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.2);
+
+.thumbnails-text
+	margin-top 60px
+	padding-bottom 20px
+	text-align left
+
+.thumbnails-h5
+	position: relative;
+	padding-left: 0;
+	margin-bottom 0
+	margin-top 0
+	font: 700 13px/20px 'Roboto', Arial
+	overflow: hidden;
+	height: 20px;
+
+	& a
+		text-decoration underline
+
+.quickly
+	padding 6px 3px
+	color #fff
+	background #ebad29
+	border-radius 7px
+
+.price
+	margin 0
+	font: 700 14px/20px 'Roboto', Arial
+
+.description
+	small
+		display block
+		line-height 20px
+		color #999
+
+//############################
+.owl-carousel
+	padding: 0 30px;
+	box-sizing: border-box;
+	position: relative;
+	margin-bottom: 15px;
+
+
+.owl-carousel__img
+	box-sizing: border-box;
+	height: 120px;
+	line-height: 78px;
+	border: 1px solid #eaeded;
+	padding: 20px;
+	text-align: center;
+
+.owl-carousel__img img
+	display: inline!important;
+	max-height: 100%;
+	width: auto!important;
+	max-width: 100%;
+
+.owl-prev
+	left 0
+	background-position: -1234px -466px;
+
+	&:hover
+		transform rotate(180deg)
+		background-position: -1244px -466px;
+
+.owl-next
+	right 0
+	transform rotate(180deg)
+	background-position: -1234px -466px;
+
+	&:hover
+		transform rotate(0deg)
+		background-position: -1244px -466px;
+
+.owl-prev,.owl-next
+	position: absolute
+	top: 50px
+
+	width: 10px
+	height: 20px
+	background-image: url('../img/sprite.png')
+	font-size 0
+	cursor: pointer

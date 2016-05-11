@@ -1,0 +1,146 @@
+<div class="banner icon-pics">
+	<div class="content center">
+
+			<div class="banner__text">
+				<h1 class="banner__h1 font-bold">Барахолка</h1>
+				<h3 class="banner__h3 font-bold">Бесплатные объявления по ремонту и строительству</h3>
+				<h4 class="banner__h4">Здесь есть всё: инструмент, материалы, товары для дома, сада, автомобилей.<br>И все: профессиональные строители и другие мастера.</h4>
+			</div>
+			<div class="button">
+				<a href="javascript:void(0)" class="btn-baner">Продавайте и покупайте товары</a>
+				<a href="javascript:void(0)" class="btn-baner">Заказывайте услуги</a>
+				<a href="javascript:void(0)" class="btn-baner">Находите заказчиков</a>
+			</div>
+
+			@@include('./search.html')
+
+	</div>
+</div>
+
+<div class="content center">
+
+	<div class="catlist-category">
+		<div class="catlist center">
+			<!--
+			<div class="catlist-minus" style="display:none;">
+				<span class="catlist-text"><a href="javascript:void(0)" class="catlist__href">Все</a><sup>4444</sup></span>
+				<span class="catlist-text"><a href="javascript:void(0)" class="catlist__href">Инструменты</a><sup>167</sup></span>
+				<span class="catlist-text"><a href="javascript:void(0)" class="catlist__href">Силовая и строительная техника</a><sup>78</sup></span>
+				<span class="catlist-text"><a href="javascript:void(0)" class="catlist__href">Транспорт</a><sup>280</sup></span>
+				<span class="catlist-text"><a href="javascript:void(0)" class="catlist__href">Обустройство дома</a><sup>78</sup></span>
+				<span class="catlist-text"><a href="javascript:void(0)" class="catlist__href">Услуги</a><sup>19</sup></span>
+				<span class="catlist-text"><a href="javascript:void(0)" class="catlist__href">Все для сада</a><sup>4444</sup></span>
+				<span class="catlist-text"><a href="javascript:void(0)" class="catlist__href">Строительные материалы</a><sup>167</sup></span>
+				<span class="catlist-text"><a href="javascript:void(0)" class="catlist__href">Электроника</a><sup>78</sup></span>
+				<span class="catlist-text"><a href="javascript:void(0)" class="catlist__href">Расходные материалы и оснастка</a><sup>280</sup></span>
+				<span class="catlist-text"><a href="javascript:void(0)" class="catlist__href">Прочее</a><sup>78</sup></span>
+			</div>
+			-->
+			<div class="rel catlist-plus">
+				<div class="catlist-header"><span class="rel catlist-text "><a href="" class="catlist__href">Все категории</a><sup>4444</sup></span></div>
+				<div class="row grid-center">
+					<div class=" grid col-md-6" style="text-align:left;">
+						@@include('./catlist-plus-elem.html',{"name":"Инструменты"})
+						@@include('./catlist-plus-elem.html',{"name":"Силовая и строительная техника"})
+						@@include('./catlist-plus-elem.html',{"name":"Транспорт"})
+						@@include('./catlist-plus-elem.html',{"name":"Обустройство дома"})
+						@@include('./catlist-plus-elem.html',{"name":"Услуги"})
+					</div>
+					<div class=" grid col-md-6" style="text-align:left;">
+						@@include('./catlist-plus-elem.html',{"name":"Все для сада"})
+						@@include('./catlist-plus-elem.html',{"name":"Строительные материалы"})
+						@@include('./catlist-plus-elem.html',{"name":"Электроника"})
+						@@include('./catlist-plus-elem.html',{"name":"Расходные материалы и оснастка"})
+						@@include('./catlist-plus-elem.html',{"name":"Прочее"})
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		<div class="catlist-button">
+				<p class="catlist-button__text js-catlist active">
+					<a class="catlist-button__href" data-open="Показать все категории" data-close="Скрыть все категории">&nbsp;&nbsp;Показать все категории&nbsp;&nbsp;</a>
+					<span class="circle"><i class="fa fa-angle-down"></i></span>
+				</p>
+
+		</div>
+
+	</div>
+
+	<div class="banner-ad ">
+		<!-- Ubrali iz zadanija
+		<div class="icon-bunner-small" style="display:none;">
+			<span class="banner-ad__text">Есть ненужный инструмент?</span><i class="icon-arrow-right"></i>
+			<span class="banner-ad__text">Подай объявление</span><i class="icon-arrow-right"></i>
+			<span class="banner-ad__text">Жди звонка от покупателя</span><i class="icon-arrow-right"></i>
+			<span class="banner-ad__text">Получи деньги</span>
+
+			<button type="submit" class="btn-category btn-category_banner">Создать объявление</button>
+		</div>
+		-->
+		<div class="icon-bunner-big rel">
+			<a href="javascript:void(0)" class="abs icon-close-banner js-banner-close"></a>
+			<i class="abs icon-tour"></i>
+			<div class="row">
+				<div class="col-md-3">
+					<p class="rel"><i class="icon-drel-nohover"></i><span class="abs circle-bunner" style="left:50%;">1</span></p>
+					<p class="banner-ad__text">Есть ненужный инструмент?</p>
+				</div>
+				<div class="col-md-3">
+					<p class="rel"><i class="icon-computer-nohover"></i><span class="abs circle-bunner" style="left:35%;">2</span></p>
+					<p class="banner-ad__text">Зарегистрируйся и подай объявление</p>
+				</div>
+				<div class="col-md-3">
+					<p class="rel"><i class="icon-telefon-nohover"></i><span class="abs circle-bunner" style="left:35%;">3</span></p>
+					<p class="banner-ad__text">Жди звонка <br> от покупателя</p>
+				</div>
+				<div class="col-md-3">
+					<p class="rel"><i class="icon-money-nohover"></i><span class="abs circle-bunner" style="left:45%;">4</span></p>
+					<p class="banner-ad__text">Получи<br>деньги</p>
+				</div>
+				<div class="text-center">
+        <a href="http://baraholka.mastercity.ru/sankt-peterburg/shops/about/" class="btn-category btn-category_banner" style="margin-top:25px;">Создать объявление</a>
+      </div>
+			</div>
+
+		</div>
+	</div>
+
+	@@include('./carousel.html')
+
+	<div class="row-fluid row-bg-top">
+
+      <h3 class="align-center">Популярное сейчас</h3>
+      <div class="thumbnails row  block-white">
+
+				@@include('./thumbnails-block.html')
+				@@include('./thumbnails-block.html')
+				@@include('./thumbnails-block.html')
+      	@@include('./thumbnails-block.html')
+
+     </div>
+  </div>
+
+  <div class="row-fluid row-bg-top">
+
+      <h3 class="align-center">Новые товары</h3>
+      <div class="thumbnails row  block-white">
+
+				@@include('./thumbnails-block.html')
+				@@include('./thumbnails-block.html')
+				@@include('./thumbnails-block.html')
+      	@@include('./thumbnails-block.html')
+
+      	@@include('./thumbnails-block.html')
+				@@include('./thumbnails-block.html')
+				@@include('./thumbnails-block.html')
+      	@@include('./thumbnails-block.html')
+
+     </div>
+			<div class="text-center" style="margin:19px 0 60px">
+            <a href="javascript:void(0)" class="btn-category border-grey-radius">Смотреть все объявления</a>
+        </div>
+  </div>
+
+</div>
